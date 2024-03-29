@@ -12,11 +12,11 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   // https://qwik.builder.io/docs/caching/
   cacheControl({
     maxAge: 0,
-    sMaxAge: 60,
+    sMaxAge: 30,
   });
   cacheControl(
     {
-      maxAge: 3600,
+      maxAge: 60,
     },
     "Vercel-CDN-Cache-Control"
   );
