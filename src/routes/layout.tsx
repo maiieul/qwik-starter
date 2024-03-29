@@ -14,8 +14,11 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
     // Always serve a cached response by default, up to a week stale
 
     // Max once every 5 seconds, revalidate on the server to get a fresh version of this page
-    maxAge: 60,
+    maxAge: 0,
+    sMaxAge: 60,
   });
+
+  // "Vercel-CDN-Cache-Control"
 };
 
 export const useServerTimeLoader = routeLoader$(() => {
