@@ -40,12 +40,12 @@ export default defineConfig(({ command, mode }): UserConfig => {
             external: Object.keys(dependencies),
           }
         : undefined,
-    server: {
-      headers: {
-        // Don't cache the server response in dev mode
-        "Cache-Control": "public, max-age=0",
-      },
-    },
+    // server: {
+    //   headers: {
+    //     // Don't cache the server response in dev mode
+    //     "Cache-Control": "public, max-age=0",
+    //   },
+    // },
     preview: {
       headers: {
         // Do cache the server response in preview (non-adapter production build)
